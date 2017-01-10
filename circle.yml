@@ -9,7 +9,8 @@ dependencies:
     - sudo pip install docker-compose
 
 test:
-  override:
+  override :
+    - docker-compose up -d
     - docker-compose run dockerapp python test.py
 
 deployment:
